@@ -119,6 +119,7 @@ button:hover{
     margin-top:-5px;
     animation: sub;
     animation-timeline: view(60%,5%);
+    margin-bottom: -6px;
 }
 @keyframes sub {
     from{
@@ -150,6 +151,8 @@ p{
     background-color: #619fbe;
     box-shadow: 0 0 20px 1px #8cd3ed;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 .ServiceCard:hover,.comboCard:hover{
     transform: scale(1.05);
@@ -160,4 +163,36 @@ p{
     color: #3592b4;
     font-size: 20px;
 }
-
+.cta{
+    margin-top: 35px;
+    font-size: 20px;
+    background-color:#2b7cae;
+    color:white;
+    padding: 20px;
+}
+.whyContainer{
+    display:flex;
+}
+.whyCard{
+    margin: 50px;
+    height: 300px;
+    flex:1;
+    border-radius: 10px;
+    justify-content:space-between ;
+    background-color: #9bd6fa9b;
+    background: linear-gradient(180deg,#9bd6fa9b,white);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.why{
+    background-color:#e5e7eb;
+    background: linear-gradient(180deg,white,#8bd1f76b);
+    padding: 5px;
+}
+.whyCard{
+    background: linear-gradient(180deg,white,#8bd1f76b);
+}
+.whyCard:hover{
+    background: linear-gradient(125deg,white,#73c8f66b);
+}
