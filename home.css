@@ -21,6 +21,12 @@ html,body{
     justify-content:space-evenly;
     align-items: center;
     color: #C8E7F2;
+    background-color: rgba(254, 255, 255, 1);
+    box-shadow: inset;
+    box-shadow: 0px 0px 10px 0.51px #d3e8f3;
+}
+.header.scrolled {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.19);
 }
 .MainImageContainer{
     width: 100%;
@@ -81,10 +87,10 @@ a:active {
     background-color:rgba(111, 217, 246, 0.2);
 }
 button{
-   margin-left: 5px;
+   margin-left: 10px;
    border-radius: 40px;
    padding: 10px;
-   margin-top: 7px;
+   margin-top: 3px;
    background-color: #619fbe;
    border: none;
 }
@@ -98,5 +104,60 @@ button:hover{
 }
 .header-button{
     flex:1;
+}
+.subHeading{
+    font-size: 50px;
+    color: #619fbe;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:500;
+     justify-self: center;
+    -webkit-text-stroke: 0.7px #247198;
+}
+.MainSubheading{
+    font-size: 25px;
+    color: #C8E7F2;
+    margin-top:-5px;
+    animation: sub;
+    animation-timeline: view(60%,5%);
+}
+@keyframes sub {
+    from{
+        opacity: 0.1;
+        scale:0.7;
+        transform:translate(0, -2)
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+p{
+    font-size: 25px;
+    color: #3592b4;
+    justify-self: center;
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+}
+.ServiceCard,.comboCard{
+    margin: 50px;
+    height: 350px;
+    flex:1;
+    border-radius: 50px;
+    justify-content:space-between ;
+    background-color: #619fbe;
+    box-shadow: 0 0 20px 1px #8cd3ed;
+    margin-bottom: 30px;
+}
+.ServiceCard:hover,.comboCard:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s;
+    background-color:#7abadb;
+}
+.link{
+    color: #3592b4;
+    font-size: 20px;
 }
 
