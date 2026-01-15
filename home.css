@@ -159,9 +159,10 @@ p{
     transition: transform 0.5s;
     background-color:#7abadb;
 }
-.link{
+.link:active,.link:link,.link:hover,.link:visited{
     color: #3592b4;
     font-size: 20px;
+    text-decoration: none;
 }
 .cta{
     margin-top: 35px;
@@ -206,8 +207,18 @@ p{
     flex:1;
     justify-self: space-evenly;
     margin:50px;
+    margin-bottom: 30px;
 }
 .reviewCard:hover{
     transform: rotate3d(1,1,0,-16deg);
     background-color: #d5f2fdd3 ;
 }
+.cta-link:active,.cta-link:link,.cta-link:hover,.cta-link:visited{
+    font-size: 20px;
+    background-color:#2b7cae;
+    color:white;
+    padding: 20px;
+    margin-top: 35px;
+    text-decoration: none;
+}
+
