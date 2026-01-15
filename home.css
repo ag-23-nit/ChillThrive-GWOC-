@@ -196,3 +196,18 @@ p{
 .whyCard:hover{
     background: linear-gradient(125deg,white,#73c8f66b);
 }
+.reviewContainer{
+    display: flex;
+    flex-direction: row;
+}
+.reviewCard{
+    background-color: #d5f2fd79;
+    height: 236px;
+    flex:1;
+    justify-self: space-evenly;
+    margin:50px;
+}
+.reviewCard:hover{
+    transform: rotate3d(1,1,0,-16deg);
+    background-color: #d5f2fdd3 ;
+}
