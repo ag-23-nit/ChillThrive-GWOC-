@@ -164,6 +164,7 @@ p{
     font-size: 20px;
     text-decoration: none;
 }
+
 .cta{
     margin-top: 35px;
     font-size: 20px;
@@ -226,6 +227,7 @@ p{
     background-color:#2b7cae;
     margin-top: 120px;
     padding-top: 100px;
+    height: 400px;
 }
 .bookhead{
     font-size: 50px;
@@ -244,7 +246,7 @@ p{
 }
 .cta-link-book:active,.cta-link-book:link,.cta-link-book:hover,.cta-link-book:visited{
     font-size: 20px;
-    color:#2b7cae
+    color:#2b7cae;
     padding: 20px;
     margin-top: 35px;
     text-decoration: none;
@@ -258,6 +260,9 @@ p{
 .ctaBook:hover{
        box-shadow: 5px 5px 10px 1px #05314d;
        border:none;
+}
+a:hover{
+    cursor: pointer;
 }
 
 
