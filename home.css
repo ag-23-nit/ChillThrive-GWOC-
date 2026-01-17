@@ -140,11 +140,11 @@ p{
 .services{
     display: flex;
     flex-wrap: wrap;
-    min-width: 500px;
 }
 .ServiceCard,.comboCard{
     margin: 50px;
     height: 350px;
+    width:600px;
     flex:1;
     border-radius: 50px;
     justify-content:space-between ;
@@ -153,6 +153,7 @@ p{
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    
 }
 .ServiceCard:hover,.comboCard:hover{
     transform: scale(1.05);
