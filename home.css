@@ -97,6 +97,7 @@ p{
     display: flex;
     flex-wrap: wrap;
 }
+
 .ServiceCard,.comboCard{
     margin: 30px;
     height: 400px;
@@ -109,13 +110,14 @@ p{
     display: flex;
     flex-direction: column;
     border-radius: 50px;
-    display: flex;
 }
+
 .ServiceCard:hover,.comboCard:hover{
     transform: scale(1.05);
     transition: transform 0.5s;
     background-color:#7abadb;
 }
+
 .link:active,.link:link,.link:hover,.link:visited{
     color: #3592b4;
     font-size: 20px;
