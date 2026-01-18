@@ -69,6 +69,9 @@ button {
     margin: 10px;
     color: whitesmoke;
     font-size: 17px;
+    background-color: rgb(32, 133, 156);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .iceBathImg {
