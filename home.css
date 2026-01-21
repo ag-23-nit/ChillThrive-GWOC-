@@ -169,6 +169,7 @@ p{
     justify-self: space-evenly;
     margin:50px;
     margin-bottom: 30px;
+    padding: 40px;
 }
 .reviewCard:hover{
     transform: rotate3d(1,1,0,-16deg);
