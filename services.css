@@ -5,17 +5,16 @@
 }
 
 html,body{
-    margin-top: 0px;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-
+    background-color: #c1e5f92a;
 }
 
 .subHeading1, .subHeading2 {
     margin-top: 126px;
     text-align: center;
-    font-size: larger;
+    font-size: 30px;
     color: rgb(32, 133, 156);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 5px;
@@ -26,6 +25,14 @@ html,body{
     color: rgb(32, 133, 156);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 5px;
+    font-size:20px ;
+}
+.top{
+       box-shadow: 0px 0px 10px 0.51px #d3e8f3;
+       margin-top: -20px;
+       padding-bottom: 50px;
+       background-color:#8cd7ff27;
+       margin-bottom: -20px;
 }
 
 ul {
@@ -39,6 +46,7 @@ ul {
     display: flex;
     gap: 180px;
     width: 100%;
+    margin-top: 100px;
 }
 
 .jacuzziTherapy {
@@ -129,7 +137,7 @@ button {
 
 .combo1, .combo2, .combo3 {
     margin: 40px;
-    height: 600px;
+    height:600px;
     width: 500px;
     flex: 1;
     justify-content: space-evenly;
@@ -184,7 +192,7 @@ hr {
 }
 
 .bookNowCombo1 button {
-    background-color: rgb(185, 236, 233);
+    background-color: rgb(185, 225, 236);
     color:#549eb9;
     width: 100%;
     height: 51px;
@@ -193,7 +201,7 @@ hr {
 }
 
 .bookNowCombo2 button {
-    background-color: rgb(185, 236, 233);
+    background-color: rgb(185, 225, 236);
     color:#549eb9;
     width: 100%;
     height: 51px;
@@ -202,10 +210,14 @@ hr {
 }
 
 .bookNowCombo3 button {
-    background-color: rgb(185, 236, 233);
+    background-color: rgb(185, 225, 236);
     color:#549eb9;
     width: 100%;
     height: 51px;
     margin: auto;    
     border-radius: 0px 0px 25px 25px;
+}
+.sub{
+    font-size: 38px;
+    color: #549eb9;
 }
