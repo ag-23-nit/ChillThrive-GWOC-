@@ -1,5 +1,16 @@
 .footer{
     display:flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .footer{
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px) {
+    .footer{
+        flex-direction: column;
+    }
 }
 .Footercontaier{
     flex:1;
@@ -8,11 +19,35 @@
     padding-left:30px;
     padding-right: 20px;
 }
+@media (max-width: 768px) {
+    .Footercontaier{
+        height: auto;
+        padding: 30px 20px;
+    }
+}
+@media (max-width: 480px) {
+    .Footercontaier{
+        height: auto;
+        padding: 20px 15px;
+    }
+}
 .Footerheading{
     color:#3592b4;
     font-size:27px;
     margin-bottom: 17px;
     font-weight: 700;
+}
+@media (max-width: 768px) {
+    .Footerheading{
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .Footerheading{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 }
 .footerP{
     color:#3592b4;
@@ -20,12 +55,37 @@
     max-width: 2000px;
     justify-self:left;
     margin-bottom:6px ;
+    width: auto;
+}
+@media (max-width: 768px) {
+    .footerP{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 480px) {
+    .footerP{
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
 }
 .FooterSheading{
     color:#2a7793;
     font-size:27px;
     margin-bottom: 17px;
     font-weight: 400;
+}
+@media (max-width: 768px) {
+    .FooterSheading{
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .FooterSheading{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 }
 .footerBottom{
     padding:40px;
