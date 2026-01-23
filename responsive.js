@@ -198,6 +198,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Founder Page Scroll Animations
+    const founderContent = document.querySelector('.founderDetail');
+    if (founderContent) {
+        const founderObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    founderObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const animatedElements = document.querySelectorAll('h1, .sub, .img, .founderDetail, .vision, .quote');
+        animatedElements.forEach(el => {
+            if (el) founderObserver.observe(el);
+        });
+    }
+
+    // Home Page Scroll Animations
+    const homeElements = document.querySelectorAll('.subHeading, .whyIntro, .ServiceCard, .whyCard, .reviewCard, .book, center .link, main h1');
+    if (homeElements.length > 0) {
+        const homeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    homeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        homeElements.forEach(el => {
+            homeObserver.observe(el);
+        });
+    }
+
+    // Load More Reviews functionality
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            const hiddenContainer = document.querySelector('.hidden-reviews');
+            if (hiddenContainer) {
+                hiddenContainer.style.display = 'flex';
+                
+                // Trigger animations for new cards
+                const newCards = hiddenContainer.querySelectorAll('.reviewCard');
+                newCards.forEach((card, index) => {
+                    setTimeout(() => card.classList.add('visible'), 50 + (index * 100));
+                });
+                
+                this.style.display = 'none';
+            }
+        });
+    }
+
     // Observe services text for slide-in animation
     const servicesObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

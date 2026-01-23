@@ -1,0 +1,137 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f9fcff;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: 80vh;
+}
+
+h1 {
+    text-align: center;
+    color: #3592b4;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    font-size: 48px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.subHeading {
+    text-align: center;
+    color: #2b7cae;
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+.rewiew p {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.reviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reviewCard {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(53, 146, 180, 0.1);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reviewCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(53, 146, 180, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.star {
+    font-size: 20px;
+}
+
+.reviewP {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-top: 15px;
+    flex-grow: 1;
+}
+
+.name {
+    color: #3592b4;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.loadMoreBtn {
+    background-color: #3592b4;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loadMoreBtn:hover {
+    background-color: #247198;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(53, 146, 180, 0.3);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays */
+.reviewCard:nth-child(2) { transition-delay: 0.2s; }
+.reviewCard:nth-child(3) { transition-delay: 0.4s; }
+.reviewCard:nth-child(4) { transition-delay: 0.6s; }
+
+@media (max-width: 768px) {
+    .reviewCard {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    .subHeading {
+        font-size: 24px;
+    }
+}
