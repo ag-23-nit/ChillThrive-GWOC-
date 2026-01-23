@@ -8,7 +8,7 @@ html,body{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    background-color: #c1e5f92a;
+    background-color: #d6e8f22a;
 }
 
 .subHeading1, .subHeading2 {
@@ -131,7 +131,7 @@ button {
 }
 
 .combo1:hover, .combo2:hover, .combo3:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 0.3s;
 }
 
@@ -221,6 +221,11 @@ hr {
     font-size: 38px;
     color: #549eb9;
 }
+<<<<<<< HEAD
+button:hover{
+    transform: scale(1);
+}
+=======
 
 /* Tablet Styles (768px and below) */
 @media (max-width: 768px) {
@@ -414,3 +419,4 @@ hr {
         font-size: 14px;
     }
 }
+>>>>>>> 844211a61ddc0c405d537a786d3bf05dda8692a2

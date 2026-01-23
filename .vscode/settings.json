@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+=======
     "CodeGPT.apiKey": "Anthropic"
+>>>>>>> 844211a61ddc0c405d537a786d3bf05dda8692a2
 }
