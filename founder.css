@@ -15,33 +15,54 @@ h1{
     font-size: 60px;
     color:#3590c8;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 0 20px;
+    opacity: 0;
+}
+h1.visible {
+    animation: fadeInDown 1s ease-out forwards;
 }
 .sub{
     font-size: 20px;
     font-weight: 400;
     color:#2b7cae;
+    opacity: 0;
+}
+.sub.visible {
+    animation: fadeInDown 1s ease-out 0.2s forwards;
 }
 .second{
     display: flex;
     justify-content:space-evenly ;
-    margin-top: 80px;
-    margin:50px;
-    margin-bottom: 30px;
+    margin: 50px auto;
     padding: 40px;
-    padding-left: 250px;
+    max-width: 1200px;
+    gap: 40px;
+    align-items: center;
 }
 .img{
-    flex:1;
+    flex: 0 0 350px;
+    height: 500px;
     background-color: #c1e5f9;
-    padding: 100px;
-    margin-right: 100px;
-    margin-top: 20px;
     box-shadow: 0 0 10px 3px #69c3fc3f;
-    margin-left: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: #3590c8;
+    border-radius: 20px;
+    opacity: 0;
+}
+.img.visible {
+    animation: fadeInLeft 1s ease-out 0.4s forwards;
 }
 .founderDetail{
-    flex:3;
-    margin-left: 30px;
+    flex:1.5;
+    opacity: 0;
+}
+.founderDetail.visible {
+    animation: fadeInRight 1s ease-out 0.4s forwards;
 }
 .subhead{
     font-size: 40px;
@@ -49,30 +70,44 @@ h1{
 }
 p{
     font-size: 20px;
-    width: 500px;
+    width: 100%;
+    max-width: 600px;
     color: #023956;
+    line-height: 1.6;
 }
 .top{
       box-shadow: 0px 0px 10px 0.51px #d3e8f3;
-      height: 280px;
+      height: auto;
+      min-height: 200px;
       margin-top: -50px;
       padding-top:30px ;
-
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 }
 .full{
-    width: 80%;
-    padding: 100px;
+    width: 90%;
+    max-width: 800px;
+    padding: 40px 20px;
     padding-top: 10px;
     align-self: center;
     justify-self: center;
     font-style: italic;
     color: #2b363c;
     font-weight: 100px;
+    text-align: center;
+    margin: 0 auto;
 }
 .vision{
     background-color: #a5e0ff44;
     padding: -5px;
     padding-top: 3px;
+    padding-bottom: 40px;
+    opacity: 0;
+}
+.vision.visible {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 .quote{
     padding-top: 100px;
@@ -80,6 +115,127 @@ p{
     padding: 30px;
     border-radius: 8px;
     margin: 50px auto;
-    width: 50%;
+    width: 60%;
+    max-width: 800px;
+    opacity: 0;
+}
+.quote.visible {
+    animation: fadeInUp 1s ease-out 0.8s forwards;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+        margin-top: 80px;
+    }
     
+    .second {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .img {
+        width: 100%;
+        max-width: 350px;
+        height: 500px;
+        margin-bottom: 30px;
+    }
+    
+    .founderDetail {
+        width: 100%;
+    }
+    
+    p {
+        max-width: 100%;
+    }
+    
+    .quote {
+        width: 80%;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+        margin-top: 70px;
+    }
+    
+    .sub {
+        font-size: 16px;
+    }
+    
+    .top {
+        padding-top: 20px;
+    }
+    
+    .second {
+        margin: 10px auto;
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .img {
+        height: 400px;
+    }
+    
+    .subhead {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+    
+    .full {
+        padding: 20px;
+        font-size: 16px;
+    }
+    
+    .quote {
+        width: 90%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+    
+    /* Override inline styles for quote on mobile */
+    .quote p {
+        font-size: 18px !important;
+        margin: 20px 0 !important;
+    }
+    
+    .quote span {
+        font-size: 40px !important;
+        margin-top: 10px !important;
+    }
 }

@@ -31,6 +31,79 @@
             opacity: 1;
             transform: translate(-50%, 0);
         }
+
+        .whyContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 0 20px;
+            margin-top: 30px;
+        }
+
+        .whyCard {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px 20px;
+            width: 22%;
+            min-width: 250px;
+            box-shadow: 0 4px 15px rgba(53, 146, 180, 0.15);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #3592b4;
+        }
+
+        .whyCard:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(53, 146, 180, 0.25);
+        }
+
+        .whyIcon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .whyH {
+            color: #3592b4;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .whyP {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .ServiceCard {
+                width: 60% !important;
+                margin: 20px auto !important;
+            }
+            .whyCard {
+                width: 60% !important;
+                margin: 10px auto !important;
+            }
+        }
+
+        /* Scroll Animations */
+        .subHeading, .whyIntro, .ServiceCard, .whyCard, .reviewCard, .book, center .link {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger delays */
+        .ServiceCard:nth-child(2), .whyCard:nth-child(2), .reviewCard:nth-child(2) { transition-delay: 0.2s; }
+        .ServiceCard:nth-child(3), .whyCard:nth-child(3), .reviewCard:nth-child(3) { transition-delay: 0.4s; }
+        .ServiceCard:nth-child(4), .whyCard:nth-child(4) { transition-delay: 0.6s; }
     </style>
 </head>
 <body>
@@ -47,7 +120,6 @@
             <div class="header-link"><a href="services.html" class="Hlink"><button class="Hbutton">Services</button></a></div>
             <div class="header-link"><a href="awareness.html" class="Hlink"><button class="Hbutton">Awareness</button></a></div>
             <div class="header-link"><a href="founder.html" class="Hlink"><button class="Hbutton">Founder</button></a></div>
-            <div class="header-link"><a href="testimonials.html" class="Hlink"><button class="Hbutton">Testimonials</button></a></div>
             <div class="header-link"><a href="gallery.html" class="Hlink"><button class="Hbutton">Gallery</button></a></div>
             <div class="header-link"><a href="contact.html" class="Hlink"><button class="Hbutton">Contacts</button></a></div>
             <div class="header-link"><a href="BookSession.html" class="Hlink"><button class="Hbutton">Book Now &#128198;</button></a></div>
@@ -197,7 +269,7 @@
     <br><span class="name" style="font-weight: 540;">Emma Davis</span>
    </div>
    </div>
-   <center><a href="testimonials.html" class="link">View All Testimonials <span style="color:#3592b4;font-weight: 200;">&rarr;</span></a></center>
+   <h5><a href="testimonials.html" class="reviewlink">View All Testimonials <span style="color:#3592b4;font-weight: 200;">&rarr;</span></a></h5>
    </div>
    <div class="book">
       <div class="bookhead">Start Your Recovery Journey Today</div>
@@ -241,22 +313,22 @@
     </div>
     <div class="Footercontaier">
      <h3 class="FooterSheading">Services</h3>
-    <a class="link" href="services.html">
+    <a class="link" href="services.html#ice">
       <p class="footerP">
       Ice Bath Therapy
      </p>
       </a>
-     <a class="link" href="awareness.html">
+     <a class="link" href="services.html#jacuzzi">
       <p class="footerP">
       Jacuzzi Therapy
      </p>
      </a>
-     <a class="link" href="founder.html">
+     <a class="link" href="services.html#steam">
       <p class="footerP">
       Steam Bath
      </p>
       </a>
-     <a class="link" href="testimonials.html">
+     <a class="link" href="services.html#combo">
       <p class="footerP">
       Combo Packages
      </p>
@@ -280,4 +352,4 @@
     </div>
 </footer>
 </body>
-</html
+</html>

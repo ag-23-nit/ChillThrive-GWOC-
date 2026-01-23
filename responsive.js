@@ -197,4 +197,39 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Founder Page Scroll Animations
+    const founderContent = document.querySelector('.founderDetail');
+    if (founderContent) {
+        const founderObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    founderObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const animatedElements = document.querySelectorAll('h1, .sub, .img, .founderDetail, .vision, .quote');
+        animatedElements.forEach(el => {
+            if (el) founderObserver.observe(el);
+        });
+    }
+
+    // Home Page Scroll Animations
+    const homeElements = document.querySelectorAll('.subHeading, .whyIntro, .ServiceCard, .whyCard, .reviewCard, .book, center .link');
+    if (homeElements.length > 0) {
+        const homeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    homeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        homeElements.forEach(el => {
+            homeObserver.observe(el);
+        });
+    }
 });

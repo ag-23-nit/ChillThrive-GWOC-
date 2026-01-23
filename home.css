@@ -487,4 +487,7 @@ a:hover,a:link,a:visited{
 .book-btn:hover {
     background-color: #2b7cae;
 }
-
+.reviewlink{
+    display: flex;
+    justify-content: center;
+}
