@@ -340,7 +340,6 @@ button{
     color: #247198;
 }
 
-<<<<<<< HEAD
 .header-link a[href="BookSession.html"] .Hbutton {
     background-color: #3592b4;
     color: white;
@@ -349,7 +348,8 @@ button{
 .header-link a[href="BookSession.html"] .Hbutton:hover {
     background-color: #247198;
     color: white;
-=======
+}
+
 /* Hamburger Menu Styles */
 .hamburger {
     display: none;
@@ -476,4 +476,9 @@ button{
     a {
         font-size: 15px;
     }
+}
+
+.Hbutton.active {
+    background-color: #3592b4;
+    color: white;
 }

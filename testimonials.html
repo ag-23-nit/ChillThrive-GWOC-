@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chill Thrive : Where recovery meets resiliense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="testimonials.css">
     <link rel="stylesheet" href="footer.css">
 </head> 
 <body>
@@ -21,11 +26,53 @@
             <div class="header-link"><a href="services.html" class="Hlink"><button class="Hbutton">Services</button></a></div>
             <div class="header-link"><a href="awareness.html" class="Hlink"><button class="Hbutton">Awareness</button></a></div>
             <div class="header-link"><a href="founder.html" class="Hlink"><button class="Hbutton">Founder</button></a></div>
+            <div class="header-link"><a href="testimonials.html" class="Hlink"><button class="Hbutton">Testimonials</button></a></div>
             <div class="header-link"><a href="gallery.html" class="Hlink"><button class="Hbutton">Gallery</button></a></div>
             <div class="header-link"><a href="contact.html" class="Hlink"><button class="Hbutton">Contacts</button></a></div>
             <div class="header-link"><a href="BookSession.html" class="Hlink"><button class="Hbutton">Book Now &#128198;</button></a></div>
         </nav>
-    </header> 
+    </header>
+    <script src="responsive.js"></script>
+    <main>
+      <h1>Testimonials</h1>
+      <div class="rewiew">
+        <br>
+        <br> 
+   <div class="reviewContainer">
+   <div class="reviewCard">
+    <span class="star">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</span><br><br>
+    <span class="reviewP" style="font-style: italic;">"Ice bath therapy has transformed my recovery routine. I feel stronger and more focused than ever!"</span><br>
+    <br><span class="name" style="font-weight: 540;">Sarah Johnson</span>
+   </div>
+   <div class="reviewCard">
+   <span class="star">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</span><br><br>
+    <span class="reviewP" style="font-style: italic;">"The combo package is incredible. Best value for money and the staff are professional and welcoming."</span><br>
+    <br><span class="name" style="font-weight: 540;">Peter Parker</span>
+   </div>
+   <div class="reviewCard">
+    <span class="star">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</span><br><br>
+    <span class="reviewP" style="font-style: italic;">"Chill Thrive has become my weekly ritual. The steam bath is so relaxing and helps me reset."</span><br>
+    <br><span class="name" style="font-weight: 540;">Emma Davis</span>
+   </div>
+   </div>
+   
+   <!-- Hidden reviews to be shown on Load More -->
+   <div class="reviewContainer hidden-reviews" style="display: none; margin-top: 30px;">
+     <div class="reviewCard">
+      <span class="star">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</span><br><br>
+      <span class="reviewP" style="font-style: italic;">"Absolutely amazing experience. The staff is knowledgeable and the facilities are top-notch."</span><br>
+      <br><span class="name" style="font-weight: 540;">Michael Brown</span>
+     </div>
+     <div class="reviewCard">
+      <span class="star">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</span><br><br>
+      <span class="reviewP" style="font-style: italic;">"Great for post-workout recovery. I've noticed a significant reduction in muscle soreness."</span><br>
+      <br><span class="name" style="font-weight: 540;">Jessica Lee</span>
+     </div>
+   </div>
+   
+   <button id="loadMoreBtn" class="loadMoreBtn">Load More</button>
+  </div>
+    </main>
 <footer style="background-color: #81abf30e; margin-top: 60px; padding: 40px 0; border-top: 3px solid #3592b42d;">
   <div class="footer">
      <div class="Footercontaier">
