@@ -13,11 +13,11 @@ html,body{
     font-family: 'DM Sans', sans-serif;
 }
 
-h1, h2, h3, h4 {
+main h1, main h2, main h3, main h4 {
     font-family: 'Playfair Display', serif;
 }
 
-h1 {
+main h1 {
     text-align: center;
 }
 
@@ -140,19 +140,19 @@ main > div {
     transform: scale(1.05);
 } */
 
-h2, h3 {
+main h2, main h3 {
     color: #3592b4;
     margin: 20px 0 10px 0;
 }
 
-p {
+main p {
     color: #555;
     line-height: 1.8;
     margin: 10px 0;
     font-size: 20px;
 }
 
-h4 {
+main h4 {
     color: #2b7cae;
     margin: 15px 0 8px 0;
     font-size: 16px;
@@ -573,23 +573,23 @@ h4 {
         flex: 0 0 120px;
     }
     
-    h1 {
+    main h1 {
         font-size: 32px;
     }
     
-    h2 {
+    main h2 {
         font-size: 24px;
     }
     
-    h3 {
+    main h3 {
         font-size: 20px;
     }
     
-    h4 {
+    main h4 {
         font-size: 16px;
     }
     
-    p {
+    main p {
         font-size: 15px;
         padding: 0 10px;
     }
@@ -717,19 +717,19 @@ h4 {
         font-size: 22px;
     }
     
-    h1 {
+    main h1 {
         font-size: 24px;
     }
     
-    h2 {
+    main h2 {
         font-size: 20px;
     }
     
-    h3 {
+    main h3 {
         font-size: 18px;
     }
     
-    h4 {
+    main h4 {
         font-size: 15px;
         margin: 12px 0 6px 0;
     }
@@ -754,12 +754,6 @@ h4 {
 
     .precautions p {
         font-size: 14px;
-    }
-    
-    p {
-        font-size: 14px;
-        line-height: 1.5;
-        padding: 0;
     }
     
     main {
