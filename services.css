@@ -91,9 +91,23 @@ button {
     margin: 10px;
 }
 
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .iceBathText, .jacuzziText, .steamBathText {
     flex-grow: 1;
     line-height: 50px;
+    animation: slideInRight linear;
+    animation-timeline: view();
+    animation-range: entry;
 }
 
 .iceBathText h2 {
@@ -221,7 +235,7 @@ hr {
     font-size: 38px;
     color: #549eb9;
 }
-<<<<<<< HEAD
+
 button:hover{
     transform: scale(1);
 }

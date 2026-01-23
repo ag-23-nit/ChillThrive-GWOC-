@@ -197,4 +197,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Observe services text for slide-in animation
+    const servicesObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('hidden');
+                servicesObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.iceBathText, .jacuzziText, .steamBathText, .iceBathImg, .jacuzziImg, .steamBathImg, .combo1, .combo2, .combo3, .subHeading1, .subHeading2, .para1, .para2').forEach(el => {
+        el.classList.add('hidden');
+        servicesObserver.observe(el);
+    });
 });
