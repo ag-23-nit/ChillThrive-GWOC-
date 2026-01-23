@@ -1,0 +1,779 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f0f8ff;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*main {
+    padding: 20px;
+}
+*/
+/*
+main > div {
+    margin: 20px 0;
+}
+*/
+.awarenessHeader {
+    text-align: center;
+   /* padding: 150px 40px 80px; */
+    /* margin: 0 0 40px 0; */
+    background: linear-gradient(to bottom, rgba(240, 248, 255, 0) 50%, #f0f8ff 100%), url('images/cold-therapy-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@keyframes slideUpHeader {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.awarenessHeader h1 {
+    font-size: 60px;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0;
+    animation: slideUpHeader 1s ease-out forwards;
+}
+
+.awarenessHeader p {
+    font-size: 18px;
+    color: rgb(245, 245, 245);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    opacity: 0;
+    animation: slideUpHeader 1s ease-out 0.3s forwards;
+}
+
+.coldTherapy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(196, 230, 247, 0.1), rgba(167, 212, 236, 0.1));
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.coldTherapy.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.coldTherapyContent {
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+}
+
+.coldTherapy.visible .coldTherapyContent {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.coldTherapyContent h2 {
+    margin-top: 0;
+    font-size: 36px;
+}
+
+.coldTherapyImage {
+    flex: 0 0 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.coldTherapyImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(53, 146, 180, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* .coldTherapyImage img:hover {
+    transform: scale(1.05);
+} */
+
+h2, h3 {
+    color: #3592b4;
+    margin: 20px 0 10px 0;
+}
+
+p {
+    color: #555;
+    line-height: 1.8;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+h4 {
+    color: #2b7cae;
+    margin: 15px 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Science Ice Baths Section */
+.scienceIceBaths {
+    padding: 60px 40px;
+    margin: 40px 0;
+}
+
+.scienceIceBaths h3 {
+    text-align: center;
+    font-size: 32px;
+    color: #3592b4;
+    margin: 0 0 40px 0;
+    font-weight: 700;
+}
+
+.scienceCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.scienceCard {
+    background: linear-gradient(135deg, #ffffff 0%, #C8E7F2 100%);
+    border-left: 5px solid #3592b4;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(53, 146, 180, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.scienceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(53, 146, 180, 0.25);
+}
+
+.scienceCard h4 {
+    margin-top: 0;
+    color: #2b7cae;
+}
+
+/* Fade-in animation for scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scienceCard.fade-in-on-scroll {
+    opacity: 0;
+}
+
+.scienceCard.visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Heat vs Cold Therapy Section */
+.heatColdTherapy {
+    padding: 60px 40px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.heatColdTherapy h2 {
+    font-size: 32px;
+    color: #3592b4;
+    margin: 0 0 40px 0;
+    font-weight: 700;
+}
+
+.comparisonContainer {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 0;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Slide in animations for comparison cards */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Heat Therapy Styling */
+.heatTherapy {
+    background: linear-gradient(135deg, #fff5f0 0%, #ffe8d6 100%);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+.heatTherapy.slide-in {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.heatTherapy:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.25);
+}
+
+.heatTherapy h3 {
+    color: #7a5c42;
+    font-size: 26px;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}
+
+.heatTherapy ul {
+    list-style: disc;
+    padding: 0 0 0 25px;
+    margin: 0;
+    text-align: left;
+}
+
+.heatTherapy li {
+    color: #7a5c42;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+.heatTherapy li:before {
+    content: none;
+}
+
+/* Cold Therapy Styling */
+.coldTherapy1 {
+    background: linear-gradient(135deg, #f0f8ff 0%, #C8E7F2 100%);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(53, 146, 180, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+}
+
+.coldTherapy1.slide-in {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+.coldTherapy1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(53, 146, 180, 0.25);
+}
+
+.coldTherapy1 h3 {
+    color: #2b7cae;
+    font-size: 26px;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}
+
+.coldTherapy1 ul {
+    list-style: disc;
+    padding: 0 0 0 25px;
+    margin: 0;
+    text-align: left;
+}
+
+.coldTherapy1 li {
+    color: #3592b4;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+/* Myths and Facts Section */
+.mythsFacts {
+    padding: 60px 40px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.mythsFacts h2 {
+    font-size: 32px;
+    color: #3592b4;
+    margin: 0 0 40px 0;
+    font-weight: 700;
+}
+
+.mythsContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(53, 146, 180, 0.1);
+}
+
+.mythItem {
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mythItem:last-child {
+    border-bottom: none;
+}
+
+
+.mythButton {
+    width: 100%;
+    padding: 25px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    
+}
+
+.mythButton:hover {
+    background-color: #f9f9f9;
+    transition: background-color 0s;
+    transition: none;
+    animation: none;
+    transform: none;
+}
+
+.mythButton h3 {
+    color: #666;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    flex: 1;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.dropdownIcon {
+    font-size: 24px;
+    color: #3592b4;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.mythItem.active .dropdownIcon {
+    content: "-";
+}
+
+.factContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: rgba(200, 231, 242, 0.3);
+}
+
+.mythItem.active .factContent {
+    max-height: 500px;
+    padding: 0 25px 25px 25px;
+}
+
+.factContent p {
+    color: #333;
+    line-height: 1.8;
+    font-size: 15px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Precautions Section */
+.precautions {
+    background: linear-gradient(135deg, #f7f3f2 0%, #f3eeec 100%);
+    border-radius: 12px;
+    padding: 30px 35px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(184, 168, 165, 0.12);
+    max-width: 800px;
+    width: 90%;
+}
+
+.precautions h3 {
+    color: #8b7575;
+    font-size: 28px;
+    margin: 0 0 25px 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+.precautions > div {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 4px solid #b8a8a5;
+    transition: all 0.3s ease;
+}
+
+.precautions > div:hover {
+    box-shadow: 0 4px 12px rgba(184, 168, 165, 0.12);
+    transform: translateX(5px);
+}
+
+.precautions h4 {
+    color: #8b7575;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+
+.precautions p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+    margin: 0;
+}
+
+.coldTherapy1 li:before {
+    content: none;
+}
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+    .awarenessHeader {
+        padding: 40px 20px;
+        margin: 30px 0;
+    }
+
+    .scienceCardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .scienceIceBaths h3 {
+        font-size: 26px;
+    }
+
+    .comparisonContainer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .heatColdTherapy {
+        padding: 40px 20px;
+    }
+
+    .heatTherapy,
+    .coldTherapy1 {
+        padding: 25px;
+    }
+
+    .mythsFacts {
+        padding: 40px 20px;
+    }
+
+    .mythsFacts h2 {
+        font-size: 28px;
+    }
+
+    .mythButton {
+        padding: 20px;
+    }
+
+    .mythButton h3 {
+        font-size: 16px;
+    }
+
+    .precautions {
+        padding: 30px 20px;
+    }
+
+    .precautions h3 {
+        font-size: 24px;
+    }
+
+    .precautions > div {
+        padding: 20px;
+    }
+
+    .awarenessHeader h1 {
+        font-size: 32px;
+    }
+
+    .awarenessHeader p {
+        font-size: 16px;
+    }
+
+    .coldTherapy {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .coldTherapyIcon {
+        flex: 0 0 120px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    h4 {
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    main > div {
+        margin: 15px 0;
+    }
+
+    .scienceIceBaths {
+        padding: 30px 15px;
+    }
+
+    .scienceCardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    body {
+        margin-top: 80px;
+    }
+
+    .awarenessHeader {
+        padding: 30px 15px;
+        margin: 20px 10px;
+    }
+
+    .awarenessHeader h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .awarenessHeader p {
+        font-size: 14px;
+    }
+
+    .coldTherapy {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .coldTherapyIcon {
+        flex: 0 0 100px;
+    }
+
+    .scienceIceBaths {
+        padding: 20px 15px;
+    }
+
+    .scienceIceBaths h3 {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .scienceCardsContainer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .scienceCard {
+        padding: 20px;
+    }
+
+    .heatColdTherapy {
+        padding: 25px 15px;
+    }
+
+    .heatColdTherapy h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .mythsFacts {
+        padding: 25px 15px;
+    }
+
+    .mythsFacts h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .mythButton {
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mythButton h3 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .dropdownIcon {
+        font-size: 18px;
+    }
+
+    .factContent {
+        padding: 15px !important;
+    }
+
+    .factContent p {
+        font-size: 13px;
+    }
+
+    .comparisonContainer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .heatTherapy,
+    .coldTherapy1 {
+        padding: 20px;
+    }
+
+    .heatTherapy h3,
+    .coldTherapy1 h3 {
+        font-size: 22px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    h4 {
+        font-size: 15px;
+        margin: 12px 0 6px 0;
+    }
+
+    .precautions {
+        padding: 20px 15px;
+    }
+
+    .precautions h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .precautions > div {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .precautions h4 {
+        font-size: 16px;
+    }
+
+    .precautions p {
+        font-size: 14px;
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0;
+    }
+    
+    main {
+        padding: 12px;
+    }
+    
+    main > div {
+        margin: 12px 0;
+    }
+    
+    .coldTherapy,
+    .scienceIceBaths {
+        padding: 10px;
+        border-left: 3px solid #3592b4;
+        padding-left: 15px;
+    }
+}
