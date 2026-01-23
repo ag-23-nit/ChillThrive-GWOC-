@@ -1,0 +1,172 @@
+        body {
+            background-color: #f0f8ff;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+        .contact-details, .feedback {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(53, 146, 180, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+/* .contact-details:hover, .feedback:hover {
+            transform: translateY(-5px);
+} */
+
+        .contact-details h2, .feedback h2 {
+            color: #3592b4;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .contact-details h3 {
+            color: #2b7cae;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #f8fdff;
+            font-family: inherit;
+        }
+
+        input[type="submit"] {
+            background-color: #3592b4;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #247198;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-header {
+            margin-top: 120px;
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-header h1 {
+            color: #3592b4;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .contact-header p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .contact-details .phone,
+        .contact-details .email,
+        .contact-details .address {
+            background-color: #f8fdff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e6f2f8;
+            transition: all 0.3s ease;
+        }
+
+        .contact-details .phone:hover,
+        .contact-details .email:hover,
+        .contact-details .address:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(53, 146, 180, 0.1);
+            border-color: #3592b4;
+        }
+
+        .contact-details .phone p:last-child,
+        .contact-details .email p:last-child,
+        .contact-details .address p:last-child {
+            margin-bottom: 0;
+        }
+
+        .location {
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .location iframe {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(53, 146, 180, 0.15);
+            display: block;
+        }
+
+        .location::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ea4335'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-header {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .contact-container {
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .location {
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
