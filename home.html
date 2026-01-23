@@ -11,6 +11,27 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="header.css">
+    <style>
+        .MainImage {
+            animation: none !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        .MainTextOverlay {
+            opacity: 0;
+            top: auto !important;
+            bottom: 15%;
+            left: 50%;
+            transform: translate(-50%, 40px);
+            transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1), transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .MainTextOverlay.visible {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    </style>
 </head>
 <body>
     <header class="header">
