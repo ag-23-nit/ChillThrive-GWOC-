@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 cards.forEach((card, index) => {
                     setTimeout(() => {
-                        card.style.opacity = '1';
+                        card.classList.add('visible');
                     }, index * 100); // Stagger animation by 100ms for each card
                 });
                 
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (scienceSection) {
         observer.observe(scienceSection);
     }
-
+    
     // Scroll animation for comparison cards (Heat vs Cold Therapy)
     const comparisonObserverOptions = {
         threshold: 0.2,
@@ -150,6 +150,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const comparisonContainer = document.querySelector('.comparisonContainer');
     if (comparisonContainer) {
         comparisonObserver.observe(comparisonContainer);
+    }
+
+    // Observe Cold Therapy section for animation
+    const coldTherapySection = document.querySelector('.coldTherapy');
+    if (coldTherapySection) {
+        const coldTherapyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    coldTherapyObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        coldTherapyObserver.observe(coldTherapySection);
     }
 
     // Accordion functionality for myths and facts
