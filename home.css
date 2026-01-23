@@ -11,8 +11,8 @@ html,body{
 .MainImage{
     width: 100%;
     height: 100%;
-   position: absolute;
-   object-fit: cover;
+    position: absolute;
+    object-fit: cover;
 }
 .MainHeading{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -25,13 +25,19 @@ html,body{
     animation: name duration timing-function delay iteration-count direction fill-mode;
 }   
 .MainTextOverlay{
-     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: static;
     color: white;
     text-align: center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    padding: 40px 20px;
+    margin-top: 200px;
+}
+
+.MainTextOverlay.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 a{
     font-size: 17px;
@@ -286,3 +292,194 @@ a:hover,a:active,a:link,a:visited{
     color:#048bb8;
 }
 
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+    .MainHeading {
+        font-size: 60px;
+    }
+    
+    .MainSubheading {
+        font-size: 20px;
+    }
+    
+    .MainTextOverlay {
+        padding: 0 20px;
+    }
+    
+    .cta {
+        font-size: 18px;
+        padding: 15px;
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+    
+    .subHeading {
+        font-size: 40px;
+        margin-top: 300px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ServiceCard {
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        margin: 20px auto;
+    }
+    
+    .serviceP {
+        font-size: 16px;
+    }
+    
+    .serviceH {
+        font-size: 22px;
+    }
+    
+    .whyCard {
+        margin: 30px;
+        padding: 20px;
+    }
+    
+    .whyH {
+        font-size: 22px;
+    }
+    
+    .whyP {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    .reviewCard {
+        margin: 30px;
+        padding: 25px;
+        height: auto;
+    }
+    
+    .book {
+        padding: 30px 20px;
+        margin-top: 60px;
+        height: auto;
+    }
+    
+    .bookhead {
+        font-size: 40px;
+    }
+    
+    .bookSub {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    body {
+        margin-top: 80px;
+    }
+    
+    .MainHeading {
+        font-size: 32px;
+    }
+    
+    .MainSubheading {
+        font-size: 14px;
+    }
+    
+    .cta {
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 3px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .subHeading {
+        font-size: 28px;
+        margin-top: 200px;
+    }
+    
+    p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    
+    .services {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .ServiceCard {
+        width: 95%;
+        max-width: none;
+        height: auto;
+        margin: 15px auto;
+        border-radius: 20px;
+    }
+    
+    .img {
+        height: 180px;
+    }
+    
+    .serviceH {
+        font-size: 18px;
+    }
+    
+    .serviceP {
+        font-size: 14px;
+        max-height: none;
+    }
+    
+    .serviceLink {
+        font-size: 16px;
+    }
+    
+    .whyCard {
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    .whyH {
+        font-size: 18px;
+    }
+    
+    .whyP {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    
+    .reviewContainer {
+        flex-direction: column;
+    }
+    
+    .reviewCard {
+        margin: 15px;
+        padding: 20px;
+        height: auto;
+    }
+    
+    .book {
+        padding: 20px 15px;
+        margin-top: 40px;
+        height: auto;
+    }
+    
+    .bookhead {
+        font-size: 28px;
+    }
+    
+    .bookSub {
+        font-size: 16px;
+    }
+    
+    .ctaBook {
+        padding: 15px;
+        border: solid 3px #2b7cae;
+    }
+}
