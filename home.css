@@ -101,11 +101,12 @@ button:hover{
 }
 .subHeading{
     font-size: 50px;
-    color: #619fbe;
     font-family: 'Playfair Display', serif;
     font-weight:500;
      justify-self: center;
-    -webkit-text-stroke: 0.7px #247198;
+    background: linear-gradient(180deg, #3592b4, #79dafe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 @media (max-width: 768px) {
     .subHeading{
@@ -167,6 +168,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 40px;
 }
 @media (max-width: 768px) {
     .services{
@@ -280,6 +282,7 @@ p{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 40px;
 }
 @media (max-width: 768px) {
     .whyContainer{
