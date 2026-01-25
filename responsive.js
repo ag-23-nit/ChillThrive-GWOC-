@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.iceBathText, .jacuzziText, .steamBathText, .iceBathImg, .jacuzziImg, .steamBathImg, .combo1, .combo2, .combo3, .subHeading1, .subHeading2, .para1, .para2').forEach(el => {
+    document.querySelectorAll('.iceBathTherapy, .jacuzziTherapy, .steamBath, .combo1, .combo2, .combo3, .subHeading1, .subHeading2, .para1, .para2').forEach(el => {
         el.classList.add('hidden');
         servicesObserver.observe(el);
     });

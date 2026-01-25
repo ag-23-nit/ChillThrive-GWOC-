@@ -9,6 +9,17 @@ html,body{
     width: 100%;
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .header-title {
     font-size: 28px;
     font-weight: 1000;
@@ -16,6 +27,7 @@ html,body{
     margin: 0;
     white-space: nowrap;
     font-family: 'Playfair Display', serif;
+    animation: fadeInDown 1s ease-out;
 }
 
 @media (max-width: 768px) {
@@ -291,7 +303,6 @@ button:hover{
     padding: 20px 20px;
     color: #3592b4;
     font-size: 17px;
-<<<<<<< HEAD
     display: flex;
     align-items: center;
     justify-content: center;

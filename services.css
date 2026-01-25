@@ -9,6 +9,11 @@ html,body{
     width: 100%;
     overflow-x: hidden;
     background-color: #d6e8f22a;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
 }
 
 .subHeading1, .subHeading2 {
@@ -16,23 +21,35 @@ html,body{
     text-align: center;
     font-size: 30px;
     color: rgb(32, 133, 156);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Playfair Display', serif;
     padding: 5px;
 }
 
 .para1, .para2 {
     text-align: center;
     color: rgb(32, 133, 156);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 5px;
     font-size:20px ;
 }
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .top{
        box-shadow: 0px 0px 10px 0.51px #d3e8f3;
        margin-top: -20px;
        padding-bottom: 50px;
        background-color:#8cd7ff27;
        margin-bottom: -20px;
+       animation: fadeInDown 1s ease-out;
 }
 
 ul {
@@ -41,7 +58,6 @@ ul {
 }
 
 .iceBathTherapy {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 40px;
     display: flex;
     gap: 180px;
@@ -50,7 +66,6 @@ ul {
 }
 
 .jacuzziTherapy {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 40px;
     display: flex;
     gap: 180px;
@@ -58,7 +73,6 @@ ul {
 }
 
 .steamBath {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 40px;
     display: flex;
     gap: 180px;
@@ -74,7 +88,7 @@ h2, h3 {
     padding-top: 10px;
 }
 
-button {
+main button {
     margin: 10px;
     color: whitesmoke;
     font-size: 17px;
@@ -91,23 +105,9 @@ button {
     margin: 10px;
 }
 
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 .iceBathText, .jacuzziText, .steamBathText {
     flex-grow: 1;
     line-height: 50px;
-    animation: slideInRight linear;
-    animation-timeline: view();
-    animation-range: entry;
 }
 
 .iceBathText h2 {
@@ -145,8 +145,8 @@ button {
 }
 
 .combo1:hover, .combo2:hover, .combo3:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(53, 146, 180, 0.3);
 }
 
 .combo1, .combo2, .combo3 {
@@ -154,10 +154,13 @@ button {
     height:600px;
     width: 500px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgb(32, 133, 156);
-    box-shadow: 0 0 20px 1px #549eb9;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(53, 146, 180, 0.15);
     border-radius: 25px;
+    transition: all 0.4s ease-in-out;
 }
 
 .comboImg1, .comboImg2, .comboImg3 {
@@ -172,28 +175,34 @@ button {
     display: flex;
     flex-wrap: wrap;
     line-height: 30px;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: #555;
 }
 
 .comboText1, .comboText2, .comboText3 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: rgb(239, 237, 237);
+    color: #333;
 }
 
 h4 {
     padding: 10px;
     font-size: x-large;
+    color: #3592b4;
+    text-align: center;
 }
 
-.duration {
-    gap: 270px;
-}
+/* .duration {
+} */
 
 .originalPrice {
-    gap: 245px;
+    color: #999;
+    text-decoration: line-through;
 }
 
 .discountedPrice {
-    gap: 220px;
+    color: #2b7cae;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .combos p {
@@ -206,39 +215,72 @@ hr {
 }
 
 .bookNowCombo1 button {
-    background-color: rgb(185, 225, 236);
-    color:#549eb9;
+    background-color: #3592b4;
+    color: white;
     width: 100%;
     height: 51px;
     margin: auto;   
     border-radius: 0px 0px 25px 25px;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
 .bookNowCombo2 button {
-    background-color: rgb(185, 225, 236);
-    color:#549eb9;
+    background-color: #3592b4;
+    color: white;
     width: 100%;
     height: 51px;
     margin: auto;
     border-radius: 0px 0px 25px 25px;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
 .bookNowCombo3 button {
-    background-color: rgb(185, 225, 236);
-    color:#549eb9;
+    background-color: #3592b4;
+    color: white;
     width: 100%;
     height: 51px;
     margin: auto;    
     border-radius: 0px 0px 25px 25px;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 .sub{
     font-size: 38px;
     color: #549eb9;
 }
 
-button:hover{
-    transform: scale(1);
+main button:hover{
+    background-color: #247198;
 }
+
+.bookNowCombo1 button:hover, .bookNowCombo2 button:hover, .bookNowCombo3 button:hover {
+    background-color: #247198;
+    transform: none;
+}
+
+.subHeading2, .para2 {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.subHeading2.hidden, .para2.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.iceBathTherapy, .jacuzziTherapy, .steamBath {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.iceBathTherapy.hidden, .jacuzziTherapy.hidden, .steamBath.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 @media (max-width: 768px) {
     .subHeading1, .subHeading2 {
         margin-top: 100px;
@@ -276,7 +318,7 @@ button:hover{
         font-size: 28px;
     }
     
-    button {
+    main button {
         font-size: 15px;
         padding: 8px;
     }
@@ -360,7 +402,7 @@ button:hover{
         padding-top: 5px;
     }
     
-    button {
+    main button {
         font-size: 14px;
         padding: 6px;
         margin: 5px;

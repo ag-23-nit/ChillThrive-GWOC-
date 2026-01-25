@@ -11,7 +11,7 @@ main {
     min-height: 80vh;
 }
 
-h1 {
+main h1 {
     text-align: center;
     color: #3592b4;
     font-family: 'Playfair Display', serif;
@@ -127,7 +127,7 @@ h1 {
         max-width: 400px;
     }
     
-    h1 {
+    main h1 {
         font-size: 36px;
     }
     
