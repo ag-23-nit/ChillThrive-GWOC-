@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             showMessage(message, "Account created! Redirecting to booking...", "success");
             setTimeout(() => {
-                window.location.href = "BookSession.html";
+                window.location.href = "home.html";
             }, 700);
         });
     }
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             showMessage(message, "Login successful! Redirecting...", "success");
             setTimeout(() => {
-                const next = sessionStorage.getItem("chillThriveNext") || "BookSession.html";
+                const next = sessionStorage.getItem("chillThriveNext") || "home.html";
                 sessionStorage.removeItem("chillThriveNext");
                 window.location.href = next;
             }, 500);
