@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
- <header class="header">
+<header class="header">
         <h1 class="header-title">Chill Thrive</h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-label">
@@ -34,10 +34,11 @@
             <div class="header-link"><a href="testimonials.html" class="Hlink"><button class="Hbutton">Testimonials</button></a></div>
             <div class="header-link"><a href="gallery.html" class="Hlink"><button class="Hbutton">Gallery</button></a></div>
             <div class="header-link"><a href="contact.html" class="Hlink"><button class="Hbutton">Contacts</button></a></div>
+            <div class="header-link"><button class="Hbutton" id="logoutBtn" type="button">Logout</button></div>
             <div class="header-link"><a href="BookSession.html" class="Hlink"><button class="Hbutton">Book Now &#128198;</button></a></div>
         </nav>
-        
     </header>
+
     <script src="responsive.js"></script>
     <main>
         <div class="services">
@@ -63,7 +64,7 @@
                     <li><span class="blueCheckmark">&#x2713;</span> Stress regulation</li>
                     </ul>
 
-                    <button class="bookNow">Book Now <span style="color: whitesmoke;">&#x2192;</span></button>
+                    <a href="BookSession.html?service=ice"><button class="bookNow" type="button">Book Now <span style="color: whitesmoke;">&#x2192;</span></button></a>
                 </div>
             </div>
 
@@ -84,7 +85,7 @@
                     <li><span class="blueCheckmark">&#x2713;</span> Stress relief</li>
                     </ul>
 
-                    <button class="bookNow">Book Now <span style="color: whitesmoke;">&#x2192;</span></button>
+                    <a href="BookSession.html?service=jacuzzi"><button class="bookNow" type="button">Book Now <span style="color: whitesmoke;">&#x2192;</span></button></a>
                 </div>
             </div>
 
@@ -104,7 +105,7 @@
                     <li><span class="blueCheckmark">&#x2713;</span> Improved circulation</li>
                     </ul>
 
-                    <button class="bookNow">Book Now <span style="color: whitesmoke;">&#x2192;</span></button>
+                    <a href="BookSession.html?service=steam"><button class="bookNow" type="button">Book Now <span style="color: whitesmoke;">&#x2192;</span></button></a>
                 </div>
             </div>
         </div>
@@ -131,7 +132,9 @@
                         </div>
                         <hr>
                         <div class="bookNowCombo1">
-                            <button>Book Now</button>
+                            <a href="BookSession.html?service=ice-steam">
+                                <button type="button">Book Now</button>
+                            </a>
                         </div>
                     </div>        
                 </div>
@@ -154,8 +157,10 @@
                         </div>
                         <hr>
                         <div class="bookNowCombo2">
-                            <button>Book Now</button>
-                        </div>
+                        <a href="BookSession.html?service=ice-jacuzzi">
+                            <button type="button">Book Now</button>
+                        </a>
+                    </div>
                     </div> 
                 </div>
                 <div class="combo3">
@@ -177,7 +182,9 @@
                         </div>
                         <hr>
                         <div class="bookNowCombo3">
-                            <button>Book Now</button>
+                            <a href="BookSession.html?service=full-recovery">
+                                <button type="button">Book Now</button>
+                            </a>
                         </div>
                     </div> 
                 </div>

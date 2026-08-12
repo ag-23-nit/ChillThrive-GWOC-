@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Chill Thrive</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+<header class="header">
+        <h1 class="header-title">Chill Thrive</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav-menu">
+            <div class="header-link"><a href="home.html" class="Hlink"><button class="Hbutton">Home</button></a></div>
+            <div class="header-link"><a href="services.html" class="Hlink"><button class="Hbutton">Services</button></a></div>
+            <div class="header-link"><a href="awareness.html" class="Hlink"><button class="Hbutton">Awareness</button></a></div>
+            <div class="header-link"><a href="founder.html" class="Hlink"><button class="Hbutton">Founder</button></a></div>
+            <div class="header-link"><a href="testimonials.html" class="Hlink"><button class="Hbutton">Testimonials</button></a></div>
+            <div class="header-link"><a href="gallery.html" class="Hlink"><button class="Hbutton">Gallery</button></a></div>
+            <div class="header-link"><a href="contact.html" class="Hlink"><button class="Hbutton">Contacts</button></a></div>
+            <div class="header-link"><button class="Hbutton" id="logoutBtn" type="button">Logout</button></div>
+            <div class="header-link"><a href="BookSession.html" class="Hlink"><button class="Hbutton">Book Now &#128198;</button></a></div>
+        </nav>
+    </header>
+
+
+    <main class="auth-page">
+        <section class="auth-card">
+            <div class="auth-heading">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h1>Login</h1>
+                <p>Continue your recovery journey with Chill Thrive.</p>
+            </div>
+
+            <form id="loginForm">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" placeholder="you@example.com" required>
+
+                <label for="loginPassword">Password</label>
+                <div class="password-wrap">
+                    <input id="loginPassword" type="password" placeholder="Enter your password" required minlength="6">
+                    <button type="button" class="show-password" data-target="loginPassword">Show</button>
+                </div>
+
+                <p id="loginMessage" class="form-message" aria-live="polite"></p>
+                <button class="primary-auth-btn" type="submit">Login</button>
+            </form>
+
+            <p class="switch-auth">Don't have an account? <a href="signup.html">Create one</a></p>
+            <p class="demo-note">Demo login: create an account on the Signup page first.</p>
+        </section>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>

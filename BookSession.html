@@ -3,9 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book a Session | Chill Thrive</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="booking.css">
 </head>
-<body>
-    
+<header class="header">
+        <h1 class="header-title">Chill Thrive</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="nav-menu">
+            <div class="header-link"><a href="home.html" class="Hlink"><button class="Hbutton">Home</button></a></div>
+            <div class="header-link"><a href="services.html" class="Hlink"><button class="Hbutton">Services</button></a></div>
+            <div class="header-link"><a href="awareness.html" class="Hlink"><button class="Hbutton">Awareness</button></a></div>
+            <div class="header-link"><a href="founder.html" class="Hlink"><button class="Hbutton">Founder</button></a></div>
+            <div class="header-link"><a href="testimonials.html" class="Hlink"><button class="Hbutton">Testimonials</button></a></div>
+            <div class="header-link"><a href="gallery.html" class="Hlink"><button class="Hbutton">Gallery</button></a></div>
+            <div class="header-link"><a href="contact.html" class="Hlink"><button class="Hbutton">Contacts</button></a></div>
+            <div class="header-link"><button class="Hbutton" id="logoutBtn" type="button">Logout</button></div>
+            <div class="header-link"><a href="BookSession.html" class="Hlink"><button class="Hbutton">Book Now &#128198;</button></a></div>
+        </nav>
+    </header>
+
+
+    <main class="booking-page">
+        <section class="booking-card">
+            <div class="booking-intro">
+                <p class="eyebrow">CHILL THRIVE</p>
+                <h1>Book Your Recovery Session</h1>
+                <p>Choose your therapy, preferred date and time, and we'll take care of the rest.</p>
+            </div>
+
+            <form id="bookingForm">
+                <div class="form-grid">
+                    <div class="field full">
+                        <label for="service">Choose a service</label>
+                        <select id="service" required>
+                            <option value="">Select a therapy</option>
+                            <option value="Ice Bath Therapy" data-price="2000">Ice Bath Therapy — ₹2,000</option>
+                            <option value="Jacuzzi Therapy" data-price="1500">Jacuzzi Therapy — ₹1,500</option>
+                            <option value="Steam Bath" data-price="1000">Steam Bath — ₹1,000</option>
+                            <option value="Ice Bath + Steam" data-price="2500">Ice Bath + Steam — ₹2,500</option>
+                            <option value="Ice Bath + Jacuzzi" data-price="2900">Ice Bath + Jacuzzi — ₹2,900</option>
+                            <option value="Full Recovery Combo" data-price="3600">Full Recovery Combo — ₹3,600</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="bookingName">Full name</label>
+                        <input id="bookingName" type="text" required placeholder="Your name">
+                    </div>
+
+                    <div class="field">
+                        <label for="bookingEmail">Email</label>
+                        <input id="bookingEmail" type="email" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="field">
+                        <label for="bookingPhone">Phone</label>
+                        <input id="bookingPhone" type="tel" required placeholder="10-digit mobile number">
+                    </div>
+
+                    <div class="field">
+                        <label for="people">Number of people</label>
+                        <input id="people" type="number" min="1" max="10" value="1" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="date">Date</label>
+                        <input id="date" type="date" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="time">Preferred time</label>
+                        <input id="time" type="time" required>
+                    </div>
+
+                    <div class="field full">
+                        <label for="notes">Special request <span>(optional)</span></label>
+                        <textarea id="notes" rows="3" placeholder="Anything we should know?"></textarea>
+                    </div>
+                </div>
+
+                <div class="summary">
+                    <div>
+                        <span>Selected service</span>
+                        <strong id="summaryService">Not selected</strong>
+                    </div>
+                    <div>
+                        <span>Price per person</span>
+                        <strong id="summaryPrice">₹0</strong>
+                    </div>
+                    <div class="total">
+                        <span>Total</span>
+                        <strong id="summaryTotal">₹0</strong>
+                    </div>
+                </div>
+
+                <p id="bookingMessage" class="booking-message" aria-live="polite"></p>
+                <button class="confirm-btn" type="submit">Confirm Booking &#128198;</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="booking.js"></script>
 </body>
 </html>
